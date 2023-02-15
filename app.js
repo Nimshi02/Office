@@ -12,24 +12,24 @@ app.post('/validate', function(req, res) {
   var final=new Array();
   var test2={
     "row_id": 2,
-    "column": "employee_name",
+    "column": "userName",
     "severity": "warning",
     "message": "Employee no longer works for company."
   };
   var test3={
     "row_id": 2,
-    "column": "employee_end_date",
+    "column": "birthdate",
     "severity": "error",
-    "message": "Employee gave notice on this date.",
-    "suggestion": "04/15/2020"
+    "message": "Employee birthday is different.",
+    "suggestion": "04/05/2003"
   };
   var test4={
     "row_id": 3,
-    "column": "employee_name",
+    "column": "age",
     "severity": "error",
-    "message": "Employee's name has changed",
-    "suggestion": "Johnny Appleseed"
-  }
+    "message": "Ege is wrong",
+    "suggestion": "20"
+  };
 final.push(test2);
 final.push(test3);
 final.push(test4);
