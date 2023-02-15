@@ -5,7 +5,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 
 var port = 9000;
-
+var variable=null;
 app.post('/validate', function(req, res) {
   var postBody=req.body;
   var final=new Array();
@@ -41,12 +41,14 @@ final.push(test4);
 //{
 //	res.send(testjson);
 //}
+variable=postBody;
 console.log(JSON.stringify(postBody));
 res.send(JSON.stringify(final));
 });
 app.get('/',function(req,res){
 res.send("Hello from server");
 });
+console.log(JSON.stringify(variable));
 console.log("I am in outside of methods");
 // start the server
 app.listen(port);
