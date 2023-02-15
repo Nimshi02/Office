@@ -9,14 +9,7 @@ var port = 9000;
 app.post('/validate', function(req, res) {
   var username=req.body.username;
   var email=req.body.email;
-  if(username==email)
-{
-	console.log("True");
-	res.send(null);
-}
-else
-{
-	res.send({[
+var testjson={[
   {
     "row_id": 2,
     "column": "employee_name",
@@ -37,7 +30,15 @@ else
     "message": "Employee's name has changed",
     "suggestion": "Johnny Appleseed"
   }
-]});
+]};
+  if(username==email)
+{
+	console.log("True");
+	res.send(null);
+}
+else
+{
+	res.send(testjson);
 }
 });
 app.get('/',function(req,res){
