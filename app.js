@@ -10,7 +10,7 @@ app.post('/validate', function(req, res) {
   var postBody=req.body;
 
 //retrive the required values
-var birthdate=o
+// var birthdate=postBody.rows[0].values.
 
 
   var final=new Array();
@@ -47,13 +47,13 @@ final.push(test4);
 //	res.send(testjson);
 //}
 variable=JSON.stringify(postBody);
-console.log("This is inside post",JSON.stringify(postBody));
+console.log("This is inside post"+JSON.stringify(postBody));
 res.send(JSON.stringify(final));
 });
 app.get('/',function(req,res){
 res.send("Hello from server");
 });
-console.log("This is the one that is running:",JSON.stringify(variable));
+console.log("This is the one that is running:"+JSON.stringify(variable));
 console.log("I am in outside of methods");
 // start the server
 app.listen(port);
