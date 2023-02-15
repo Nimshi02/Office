@@ -9,6 +9,7 @@ var port = 9000;
 app.post('/validate', function(req, res) {
   var username=req.body.username;
   var email=req.body.email;
+  var final=new Array();
   var test2={
     "row_id": 2,
     "column": "employee_name",
@@ -29,8 +30,9 @@ app.post('/validate', function(req, res) {
     "message": "Employee's name has changed",
     "suggestion": "Johnny Appleseed"
   }
-test2.test=new Array();
-test2.test.push(test3)
+final.push(test2);
+final.push(test3);
+final.push(test4);
  // if(username==email)
 //{
 //	console.log("True");
@@ -40,7 +42,7 @@ test2.test.push(test3)
 //{
 //	res.send(testjson);
 //}
-res.send(JSON.stringify(test2));
+res.send(JSON.stringify(final));
 });
 app.get('/',function(req,res){
 res.send("Hello from server");
