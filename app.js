@@ -7,8 +7,7 @@ app.use(bodyParser.json())
 var port = 9000;
 
 app.post('/validate', function(req, res) {
-  var username=req.body.username;
-  var email=req.body.email;
+  var postBody=req.body;
   var final=new Array();
   var test2={
     "row_id": 2,
@@ -42,6 +41,7 @@ final.push(test4);
 //{
 //	res.send(testjson);
 //}
+console.log(JSON.stringify(postBody));
 res.send(JSON.stringify(final));
 });
 app.get('/',function(req,res){
