@@ -47,7 +47,7 @@ res.send(JSON.stringify(final));
 app.get('/',function(req,res){
 res.send("Hello from server");
 });
-
+console.log("I am in outside of methods");
 // start the server
 app.listen(port);
 console.log('Server started! At http://localhost:' + port);
