@@ -12,7 +12,7 @@ app.post('/validate', function(req, res) {
   var final=new Array();
   var test2={
     "row_id": 2,
-    "column": "userName",
+    "column": "email",
     "severity": "warning",
     "message": "Employee no longer works for company."
   };
