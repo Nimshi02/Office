@@ -41,7 +41,7 @@ final.push(test4);
 //{
 //	res.send(testjson);
 //}
-variable=postBody;
+variable=JSON.stringify(postBody);
 console.log(JSON.stringify(postBody));
 res.send(JSON.stringify(final));
 });
