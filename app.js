@@ -16,7 +16,28 @@ app.post('/validate', function(req, res) {
 }
 else
 {
-	res.send(username);
+	res.send([
+  {
+    "row_id": 2,
+    "column": "employee_name",
+    "severity": "warning",
+    "message": "Employee no longer works for company."
+  },
+  {
+    "row_id": 2,
+    "column": "employee_end_date",
+    "severity": "error",
+    "message": "Employee gave notice on this date.",
+    "suggestion": "04/15/2020"
+  },
+  {
+    "row_id": 3,
+    "column": "employee_name",
+    "severity": "error",
+    "message": "Employee's name has changed",
+    "suggestion": "Johnny Appleseed"
+  }
+]);
 }
 });
 app.get('/',function(req,res){
