@@ -8,6 +8,11 @@ var port = 9000;
 var variable=null;
 app.post('/validate', function(req, res) {
   var postBody=req.body;
+
+//retrive the required values
+var birthdate=o
+
+
   var final=new Array();
   var test2={
     "row_id": 2,
@@ -41,8 +46,8 @@ final.push(test4);
 //{
 //	res.send(testjson);
 //}
-variable=JSON.stringify("This is inside post method",postBody);
-console.log(JSON.stringify(postBody));
+variable=JSON.stringify(postBody);
+console.log("This is inside post",JSON.stringify(postBody));
 res.send(JSON.stringify(final));
 });
 app.get('/',function(req,res){
