@@ -30,7 +30,7 @@ app.post('/validate', function(req, res) {
     "suggestion": "Johnny Appleseed"
   }
 test2.test=new Array();
-resut2.test.push(test3)
+test2.test.push(test3)
  // if(username==email)
 //{
 //	console.log("True");
@@ -40,7 +40,7 @@ resut2.test.push(test3)
 //{
 //	res.send(testjson);
 //}
-res.send(JSON.stringify(result));
+res.send(JSON.stringify(test2));
 });
 app.get('/',function(req,res){
 res.send("Hello from server");
