@@ -6,7 +6,7 @@ app.use(bodyParser.json())
 
 var port = 9000;
 
-app.post('/validate', function(req, res) {
+app.post('/', function(req, res) {
   var username=req.body.username;
   var email=req.body.email;
   if(username==email)
