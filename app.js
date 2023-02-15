@@ -41,14 +41,14 @@ final.push(test4);
 //{
 //	res.send(testjson);
 //}
-variable=JSON.stringify(postBody);
+variable=JSON.stringify("This is inside post method",postBody);
 console.log(JSON.stringify(postBody));
 res.send(JSON.stringify(final));
 });
 app.get('/',function(req,res){
 res.send("Hello from server");
 });
-console.log(JSON.stringify(variable));
+console.log("This is the one that is running:",JSON.stringify(variable));
 console.log("I am in outside of methods");
 // start the server
 app.listen(port);
