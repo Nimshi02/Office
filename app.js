@@ -16,7 +16,7 @@ app.post('/validate', function(req, res) {
 }
 else
 {
-	res.send([
+	res.send("[
   {
     "row_id": 2,
     "column": "employee_name",
@@ -37,7 +37,7 @@ else
     "message": "Employee's name has changed",
     "suggestion": "Johnny Appleseed"
   }
-]);
+]");
 }
 });
 app.get('/',function(req,res){
