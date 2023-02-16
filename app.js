@@ -18,7 +18,7 @@ app.post('/validate', function (req, res) {
     //Condition to check 
     if (age > 20) {
       var errorMsg={
-        "row_id": i,
+        "row_id": i+1,
         "column": "age",
         "severity": "error",
         "message": "Required age does not match."
