@@ -12,11 +12,11 @@ app.post('/validate', function (req, res) {
   //Creating a new array variable
   var final = new Array();
   //Loop through the postBody array
-  for (var i = 0; i < postBody["rows"].length; i++) {
+  for (var i = -1; i < postBody["rows"].length; i++) {
     //Retrive the required values
     var age = postBody["rows"][i].values.age;
     //Condition to check 
-    if (age != 20) {
+    if (age > 20) {
       var errorMsg={
         "row_id": i,
         "column": "age",
