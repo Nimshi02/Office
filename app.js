@@ -13,7 +13,7 @@ app.post('/validate', function (req, res) {
   var final = new Array();
 
   //Loop through the postBody array
-  for (var i = 0; i < postBody.length; i++) {
+  for (var i = 0; i < 10; i++) {
     //Retrive the required values
     var age = postBody.rows[i].values.age;
     //Condition to check 
