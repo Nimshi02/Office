@@ -16,7 +16,7 @@ app.post('/validate', function (req, res) {
     //Retrive the required values
     var age = postBody.rows[i].values.age;
     //Condition to check 
-    if (10 != 20) {
+    if (age != 20) {
       var errorMsg={
         "row_id": i,
         "column": "age",
