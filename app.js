@@ -16,8 +16,7 @@ app.post('/validate', function (req, res) {
   for (var i = 0; i < postBody.length; i++) {
     //Retrive the required values
     var age = postBody.rows[i].values.age;
-
-    //Condition to check
+    //Condition to check 
     if (10 != 20) {
       var errorMsg={
         "row_id": i,
@@ -28,10 +27,9 @@ app.post('/validate', function (req, res) {
       final.push(errorMsg);
     }
 
-  }
+  } 
   console.log(JSON.stringify(final));
   res.send(JSON.stringify(final));
-
 
 });
 
