@@ -13,7 +13,8 @@ app.post('/validate', function (req, res) {
   //Creating a new array variable
   var final = new Array();
   //Loop through the postBody array
-  var embed_url=postBody["embed_user_jwt"];
+  var embed_url=postBody["auth"];
+  if(embed_url!=null){
   for (var i = 0; i < postBody["rows"].length; i++) {
     //Retrive the required values
     var age = postBody["rows"][i].values.age;
@@ -27,7 +28,7 @@ app.post('/validate', function (req, res) {
       };
       final.push(errorMsg);
     }
-
+  }
   }
   console.log(embed_url); 
   console.log(JSON.stringify(final));
