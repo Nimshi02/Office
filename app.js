@@ -13,7 +13,7 @@ app.post('/validate', function (req, res) {
   //Creating a new array variable
   var final = new Array();
   //Loop through the postBody array
-  var embed_url=postBody["auth"];
+  var embed_url=postBody["embed_user_jwt"];
   if(embed_url!=null){
   for (var i = 0; i < postBody["rows"].length; i++) {
     //Retrive the required values
