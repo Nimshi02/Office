@@ -9,7 +9,6 @@ var variable = null;
 var embed_url=null;
 app.post('/validate', function (req, res) {
   var postBody = req.body;
-var name=postBody.importConfig.data.name;
 console.log(name);
   //Creating a new array variable
   var final = new Array();
