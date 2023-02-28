@@ -4,7 +4,6 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 var port = 9000;
-var variable = null;
 app.post('/validate', function (req, res) {
   var postBody = req.body;
   //Creating a new array variable
