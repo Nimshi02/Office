@@ -9,7 +9,7 @@ app.post('/validate', function (req, res) {
   var postBody = req.body;
   //Creating a new array variable
   var final = new Array();
-
+  //Loop through the postBody array
   for (var i = 0; i < postBody["rows"].length; i++) {
     //Retrive the required values
     var age = postBody["rows"][i].values.age;
@@ -24,6 +24,7 @@ app.post('/validate', function (req, res) {
       final.push(errorMsg);
     }
   }
+  res.send(JSON.stringify(final));
 
 });
 
