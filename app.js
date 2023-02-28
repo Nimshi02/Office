@@ -9,6 +9,7 @@ app.post('/validate', function (req, res) {
   var postBody = req.body;
   //Creating a new array variable
   var final = new Array();
+
   for (var i = 0; i < postBody["rows"].length; i++) {
     //Retrive the required values
     var age = postBody["rows"][i].values.age;
@@ -28,6 +29,5 @@ app.post('/validate', function (req, res) {
 
 
 // start the server
-console.log(embed_url);
 app.listen(port);
 console.log('Server started! At http://localhost:' + port);
