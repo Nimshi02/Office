@@ -6,6 +6,7 @@ app.use(bodyParser.json())
 var port = 9000;
 app.post('/validate', function (req, res) {
   var postBody = req.body;
+  console.log(postBody);
   //Creating a new array variable
   var final = new Array();
   //Loop through the postBody array
